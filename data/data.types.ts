@@ -10,13 +10,13 @@ export interface Database {
           data: Json | null
         }
         Insert: {            // the data to be passed to .insert()
-          id?: never         // generated columns must not be supplied
-          name: string       // `not null` columns with no default must be supplied
-          data?: Json | null // nullable columns can be omitted
+          id?: number
+          name: string
+          data?: Json | null
         }
         Update: {            // the data to be passed to .update()
-          id?: never
-          name?: string      // `not null` columns are optional on .update()
+          id?: number
+          name?: string
           data?: Json | null
         }
       }

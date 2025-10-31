@@ -6,7 +6,7 @@ async function main() {
     const movies = await getMovies();
     
     const table = new Table({
-      head: ['No.', 'Title', 'Year', 'Genre', 'Duration'],
+      head: ['No.', 'Title', 'Year', 'Genre', 'Runtime', 'Duration'],
       colWidths: [5, 30, 10, 15, 15]
     });
 
@@ -17,6 +17,7 @@ async function main() {
         movie.name,
         movieData.year || 'N/A',
         movieData.genre || 'N/A',
+        movieData.runtime || 'N/A',
         movieData.duration || 'N/A'
       ]);
     });
